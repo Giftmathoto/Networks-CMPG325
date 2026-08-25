@@ -40,6 +40,7 @@ The network design will address the following requirements:
 
 ## 3. Proposed Physical Topology
 
+The network will use a star topology, with the Cisco 2960 switch acting as the central connectivity device. Departmental end devices, servers, printers, and wireless access points will connect to the central switch. The Cisco 2911 router will connect to the switch through a trunk link to provide inter-VLAN routing
 The physical topology will use:
 
 - **1 × Cisco 2911 router** (`KHT-R1`)
