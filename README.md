@@ -305,13 +305,17 @@ The ADMIN PC, for example, successfully reached `8.8.8.8` with 0% packet loss du
 
 ---
 
-## 13. Firewall Note
+## 13. Firewall Attempt and Final Decision
 
-A Cisco ASA 5505 firewall was temporarily evaluated as an optional real-world enhancement.
+A Cisco ASA 5505 firewall was attempted as an additional security feature to make the network more representative of a real-world organisational network.
 
-The ASA was **not retained in the active production path** because its Packet Tracer implementation interfered with the previously working WAN/Internet path. The original KHT-R1-to-ISP design was restored and successfully revalidated.
+During the implementation, the ASA was placed between KHT-R1 and the ISP and configured for inside/outside connectivity, routing and NAT. However, after introducing the firewall, the existing Internet connection was disrupted and the end devices could no longer successfully reach the Internet through the firewall in Packet Tracer.
 
-The firewall experiment is therefore not part of the final active network configuration.
+Several configuration and troubleshooting attempts were made, but the firewall continued to interfere with the working Internet path. Since the firewall was **not a required feature for the assignment** and the main network functionality was already working, the decision was made to remove the ASA from the active path.
+
+The original direct KHT-R1-to-ISP connection was then restored and re-tested successfully. Internet connectivity from the router and departmental networks was confirmed after the restoration.
+
+Therefore, the ASA firewall is **not included in the final active network path**. The attempt is documented as an implementation and troubleshooting exercise, while the final topology prioritises the required working network functionality.
 
 ---
 
@@ -337,8 +341,11 @@ The firewall experiment is therefore not part of the final active network config
 - [x] Switch trunking
 - [x] Department and guest printers
 
-### Optional / Not part of final path
+### Attempted but not included in final topology
 
+- [x] ASA firewall evaluated
+- [x] Firewall troubleshooting performed
+- [x] Original working WAN restored after firewall removal
 - [ ] ASA firewall inline deployment
 
 ---
@@ -406,7 +413,10 @@ The Packet Tracer project file should represent the final working implementation
 - Implemented NAT/PAT and Internet connectivity.
 - Added departmental and Guest printers.
 - Completed connectivity and configuration testing.
-- Evaluated an optional ASA firewall and restored the original working WAN design after testing.
+- Attempted to introduce a Cisco ASA firewall.
+- The firewall disrupted Internet connectivity in the Packet Tracer environment.
+- Removed the ASA from the active path and restored the original working WAN design.
+- Re-tested Internet connectivity successfully after restoration.
 
 ---
 
@@ -414,4 +424,4 @@ The Packet Tracer project file should represent the final working implementation
 
 This repository documents the development and implementation of the Kgalagadi Heritage Tours network for CMPG325.
 
-It provides a record of the network design, implementation decisions, configuration requirements, testing evidence, and changes made throughout the project.
+It provides a record of the network design, implementation decisions, troubleshooting, testing evidence, and changes made throughout the project.
